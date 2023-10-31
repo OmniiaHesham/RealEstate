@@ -1,0 +1,15 @@
+{
+
+  
+  "name": "rep-complete-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "cypress": "^13.3.0"
+  },
+  "devDependencies": {
+    "cypress-qase-reporter": "^1.4.3"
+  }
+}
