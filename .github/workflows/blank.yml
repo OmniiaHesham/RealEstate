@@ -1,0 +1,35 @@
+name: Open Dev Site with VPN
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  vpn:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Check curl version
+        run: curl --version
+       
+      - name: Prepare VPN Config file
+        run: |
+         echo "VPN Config Test: " &&
+         echo $vpn_creds &&
+         echo $vpn_creds  >> /tmp/vpn_client.config
+
+
+
+
+
+
+
+
+
+
+
+
