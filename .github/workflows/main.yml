@@ -1,14 +1,31 @@
-name: Cypress Tests
+name: Open Dev Site with VPN
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - Test
 
 jobs:
+  vpn:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Check curl version
+        run: curl --version
+       
+      - name: Prepare VPN Config file
+        run: |
+         echo "VPN Config Test: " &&
+         echo $vpn_creds &&
+         echo $vpn_creds  >> /tmp/vpn_client.config
+
+
+
+
+
   build:
     runs-on: ubuntu-latest
 
